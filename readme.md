@@ -40,8 +40,3 @@ This API automates the process of organizing receipt data so users can focus on 
 - 🔐 Authentication & user-specific storage (optional)
 - 📊 Extendable for budgeting, reporting, or tax exports
 
----
-
-## 🧪 Example API Usage
-
-### Upload Endpoint
