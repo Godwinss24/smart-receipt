@@ -2,6 +2,7 @@ import { CreationOptional, DataTypes, InferAttributes, InferCreationAttributes, 
 import sequelize from '../config/db'
 
 
+
 class User extends Model<InferAttributes<User>, InferCreationAttributes<User>> {
   declare id: CreationOptional<string>
   declare email: string;
@@ -16,14 +17,15 @@ User.init({
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: false, // Email is required
+    allowNull: false, 
   },
   password: {
     type: DataTypes.STRING,
-    allowNull: false, // Password is required
+    allowNull: false, 
   }
 
 }, { sequelize, timestamps: true, freezeTableName: true })
+
 
 
 export default User
