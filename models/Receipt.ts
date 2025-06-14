@@ -21,7 +21,7 @@ Receipt.init({
     primaryKey: true,
   },
   userId: {
-    type: DataTypes.STRING,
+    type: DataTypes.UUID,
     allowNull: false
   },
   imageUrl: {
@@ -30,18 +30,18 @@ Receipt.init({
   },
   vendor: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: true
   },
   date: {
-    type: DataTypes.DATE,
-    allowNull: false
+    type: DataTypes.STRING,
+    allowNull: true
   },
   total: {
     type: DataTypes.FLOAT,
-    allowNull: false
+    allowNull: true
   },
   parsedText: {
-    type: DataTypes.STRING,
+    type: DataTypes.TEXT,
     allowNull: false
   },
 

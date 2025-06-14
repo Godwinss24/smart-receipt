@@ -6,9 +6,8 @@ dotenv.config();
 const serverURL = process.env.SERVER_URL;
 
 if (!serverURL) {
-    throw new Error("ServerURL missing");
-
-};
+  throw new Error("ServerURL missing");
+}
 
 const options = {
   definition: {
@@ -24,6 +23,15 @@ const options = {
         description: 'Local server',
       },
     ],
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: 'http',
+          scheme: 'bearer',
+          bearerFormat: 'JWT',
+        },
+      },
+    },
   },
   apis: ['./routes/*.ts'], 
 };
@@ -32,5 +40,5 @@ const swaggerSpec = swaggerJSDoc(options);
 
 module.exports = {
   swaggerSpec,
-  swaggerUiHandler: swaggerUi
+  swaggerUiHandler: swaggerUi,
 };
