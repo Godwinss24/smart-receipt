@@ -1,11 +1,7 @@
 import { Response } from "express";
-import { CreateReceiptRequest } from "../../interfaces/createReceiptRequest";
 import { ApiResponse } from "../../interfaces/aResponse";
 import { ResponseMessages } from "../../interfaces/responses";
-import uploadImageToCloudinary from "../../services/uploadImage";
-import { Tesseract } from "tesseract.ts";
-import { parseReceiptText } from "../../utilities/extract";
-import { CreateReceipt, findAllUsersReceipt } from "../../services/receipt/receipt.service";
+import {  findAllUsersReceipt } from "../../services/receipt/receipt.service";
 import { findOneUser } from "../../services/user/user.service";
 import { FindAllRequest } from "../../interfaces/findAllReceiptRequest";
 
